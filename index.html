@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kora Wine | بطولات الأحياء</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Cairo',sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,.75),#000),
+    url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:900;
+  color:#00ff87;
+}
+
+.hero p{
+  max-width:720px;
+  margin:20px auto;
+  font-size:1.2rem;
+  line-height:1.9;
+  color:#eee;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:16px 45px;
+  background:#00ff87;
+  color:#000;
+  font-weight:800;
+  font-size:1.1rem;
+  border-radius:50px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 30px #00ff87;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.box{
+  background:#111;
+  border-radius:22px;
+  padding:35px;
+  transition:.3s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  background:#00ff8715;
+}
+
+.box h3{
+  margin-bottom:15px;
+  color:#00ff87;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:18px;
+  transition:.4s;
+  filter:grayscale(.2);
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+  filter:none;
+}
+
+/* COUNTDOWN */
+.countdown{
+  font-size:2.6rem;
+  color:#00ff87;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  padding:25px;
+  background:#050505;
+  color:#888;
+  font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>الحومة تناديك… هل أنت جاهز؟</h1>
+    <p>
+      في <strong>Kora Wine</strong> تلقى منافسين من نفس الولاية،  
+      تلعب مباريات حقيقية في ملاعب بلدية،  
+      وتسجّل اسمك في بطولة الأحياء وين يبدأ المشوار.
+    </p>
+
+    <!-- زر التسجيل -->
+    <a href="https://kora-wine.vercel.app" class="btn">
+      ⚽ سجّل الآن وادخل العب
+    </a>
+
+    <p style="margin-top:12px;color:#aaa;font-size:14px">
+      التسجيل مجاني • المنافسة حقيقية • المجد للحومة
+    </p>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section>
+  <h2>لماذا Kora Wine؟</h2>
+  <br>
+  <div class="features">
+    <div class="box">
+      <h3>📍 لاعبين من ولايتك</h3>
+      <p>تلعب مع ناس قريبة ليك، بلا سفر وبلا تعقيد.</p>
+    </div>
+    <div class="box">
+      <h3>🏆 بطولات الأحياء</h3>
+      <p>من الحومة للولاية… اسمك يطلع.</p>
+    </div>
+    <div class="box">
+      <h3>🔥 منافسة حقيقية</h3>
+      <p>مباريات برجولة وحماس الملعب.</p>
+    </div>
+    <div class="box">
+      <h3>🎯 تسجيل سريع</h3>
+      <p>دقيقة وحدة وتدخل الجو.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2>الملعب يشهد…</h2>
+  <br>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d">
+    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6">
+    <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6">
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <h2>جاهز تكتب اسمك في التاريخ؟</h2>
+  <a href="https://kora-wine.vercel.app" class="btn">
+    🔥 سجّل الآن
+  </a>
+</section>
+
+<footer>
+  © 2025 Kora Wine — الكورة تجمعنا ⚽
+</footer>
+
+</body>
+</html>
