@@ -3,210 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kora Wine | بطولات الأحياء</title>
+
+<title>رؤية | Boutique</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500;700&family=Cairo:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Cairo',sans-serif;
-}
 
 body{
-  background:#000;
-  color:#fff;
-  overflow-x:hidden;
+margin:0;
+font-family:'Cairo',sans-serif;
+background:#fdeff2;
+color:#444;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+background:#fff;
+padding:20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-family:'Marhey',cursive;
+font-size:42px;
+color:#d46a83;
 }
 
 /* HERO */
+
 .hero{
-  min-height:100vh;
-  background:
-    linear-gradient(to bottom,rgba(0,0,0,.75),#000),
-    url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.35);
+padding:40px;
+border-radius:15px;
+max-width:500px;
 }
 
 .hero h1{
-  font-size:3rem;
-  font-weight:900;
-  color:#00ff87;
+font-size:48px;
+margin-bottom:10px;
 }
 
-.hero p{
-  max-width:720px;
-  margin:20px auto;
-  font-size:1.2rem;
-  line-height:1.9;
-  color:#eee;
-}
-
-/* BUTTON */
 .btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:16px 45px;
-  background:#00ff87;
-  color:#000;
-  font-weight:800;
-  font-size:1.1rem;
-  border-radius:50px;
-  text-decoration:none;
-  transition:.3s;
+background:#e88ea2;
+border:none;
+padding:14px 30px;
+color:white;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
 }
 
-.btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 30px #00ff87;
+/* STORY */
+
+.story{
+background:#fff3f6;
+padding:80px 20px;
 }
 
-/* SECTIONS */
-section{
-  padding:80px 20px;
-  text-align:center;
+.story-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+align-items:center;
 }
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  max-width:1000px;
-  margin:auto;
+.story img{
+width:100%;
+border-radius:20px;
 }
 
-.box{
-  background:#111;
-  border-radius:22px;
-  padding:35px;
-  transition:.3s;
+.story h2{
+font-family:'Marhey',cursive;
+font-size:34px;
+color:#d46a83;
 }
 
-.box:hover{
-  transform:translateY(-10px);
-  background:#00ff8715;
+/* PRODUCTS */
+
+.section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.box h3{
-  margin-bottom:15px;
-  color:#00ff87;
+.section h2{
+text-align:center;
+font-family:'Marhey',cursive;
+font-size:32px;
+color:#d46a83;
+margin-bottom:40px;
 }
 
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:15px;
-  max-width:1100px;
-  margin:auto;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.gallery img{
-  width:100%;
-  border-radius:18px;
-  transition:.4s;
-  filter:grayscale(.2);
+.card{
+background:#fff7f9;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-.gallery img:hover{
-  transform:scale(1.05);
-  filter:none;
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
 }
 
-/* COUNTDOWN */
-.countdown{
-  font-size:2.6rem;
-  color:#00ff87;
-  margin-top:20px;
+.card-content{
+padding:15px;
+}
+
+.price{
+color:#d46a83;
+font-weight:bold;
+margin:10px 0;
+}
+
+.buy{
+background:#e88ea2;
+border:none;
+color:white;
+padding:10px 22px;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* ORDER PAGE */
+
+.order{
+display:none;
+max-width:500px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.submit{
+background:#e88ea2;
+border:none;
+color:white;
+padding:12px;
+width:100%;
+border-radius:25px;
+cursor:pointer;
 }
 
 /* FOOTER */
+
 footer{
-  padding:25px;
-  background:#050505;
-  color:#888;
-  font-size:.9rem;
+text-align:center;
+padding:30px;
+background:#222;
+color:white;
+margin-top:60px;
 }
+
 </style>
 </head>
 
 <body>
 
+<header>
+<div class="logo">رؤية</div>
+</header>
+
+
 <!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>الحومة تناديك… هل أنت جاهز؟</h1>
-    <p>
-      في <strong>Kora Wine</strong> تلقى منافسين من نفس الولاية،  
-      تلعب مباريات حقيقية في ملاعب بلدية،  
-      وتسجّل اسمك في بطولة الأحياء وين يبدأ المشوار.
-    </p>
 
-    <!-- زر التسجيل -->
-    <a href="https://kora-wine.vercel.app" class="btn">
-      ⚽ سجّل الآن وادخل العب
-    </a>
+<section class="hero">
 
-    <p style="margin-top:12px;color:#aaa;font-size:14px">
-      التسجيل مجاني • المنافسة حقيقية • المجد للحومة
-    </p>
-  </div>
+<div class="hero-box">
+
+<h1>رؤية</h1>
+
+<p>أناقة أنثوية بتصاميم عصرية وفاخرة</p>
+
+<a href="#products">
+<button class="btn">اكتشف المنتجات</button>
+</a>
+
 </div>
 
-<!-- FEATURES -->
-<section>
-  <h2>لماذا Kora Wine؟</h2>
-  <br>
-  <div class="features">
-    <div class="box">
-      <h3>📍 لاعبين من ولايتك</h3>
-      <p>تلعب مع ناس قريبة ليك، بلا سفر وبلا تعقيد.</p>
-    </div>
-    <div class="box">
-      <h3>🏆 بطولات الأحياء</h3>
-      <p>من الحومة للولاية… اسمك يطلع.</p>
-    </div>
-    <div class="box">
-      <h3>🔥 منافسة حقيقية</h3>
-      <p>مباريات برجولة وحماس الملعب.</p>
-    </div>
-    <div class="box">
-      <h3>🎯 تسجيل سريع</h3>
-      <p>دقيقة وحدة وتدخل الجو.</p>
-    </div>
-  </div>
 </section>
 
-<!-- GALLERY -->
-<section>
-  <h2>الملعب يشهد…</h2>
-  <br>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d">
-    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6">
-    <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6">
-  </div>
+
+<!-- STORY -->
+
+<section class="story">
+
+<div class="story-container">
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<h2>قصة رؤية</h2>
+
+<p>
+وُلدت رؤية من شغف بالأناقة والأنوثة الراقية.
+نسعى إلى تقديم تصاميم تجمع بين البساطة والفخامة
+لتمنح كل امرأة إطلالة مميزة.
+</p>
+
+<p>
+كل قطعة في رؤية تم اختيارها بعناية
+لتكون جزءًا من أسلوب حياة مليء بالجمال والثقة.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CTA -->
-<section>
-  <h2>جاهز تكتب اسمك في التاريخ؟</h2>
-  <a href="https://kora-wine.vercel.app" class="btn">
-    🔥 سجّل الآن
-  </a>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+<h2>منتجاتنا</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+<div class="card-content">
+<h3>فستان فاخر</h3>
+<div class="price">9500 DA</div>
+<button class="buy" onclick="order('فستان فاخر')">شراء</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<div class="card-content">
+<h3>عباية أنيقة</h3>
+<div class="price">11000 DA</div>
+<button class="buy" onclick="order('عباية أنيقة')">شراء</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975922284-9d3c1c9f7f02">
+<div class="card-content">
+<h3>طقم عصري</h3>
+<div class="price">8700 DA</div>
+<button class="buy" onclick="order('طقم عصري')">شراء</button>
+</div>
+</div>
+
+</div>
+
 </section>
+
+
+<!-- ORDER -->
+
+<div class="order" id="orderBox">
+
+<h3>طلب المنتج</h3>
+
+<form onsubmit="send(event)">
+
+<input id="product" readonly>
+
+<input placeholder="الاسم الكامل" required>
+
+<input placeholder="رقم الهاتف" required>
+
+<textarea placeholder="العنوان"></textarea>
+
+<button class="submit">ارسال الطلب</button>
+
+</form>
+
+</div>
+
 
 <footer>
-  © 2025 Kora Wine — الكورة تجمعنا ⚽
+رؤية © 2026
 </footer>
 
+
+<script>
+
+function order(name){
+
+document.getElementById("orderBox").style.display="block"
+document.getElementById("product").value=name
+
+window.scrollTo({
+top:document.getElementById("orderBox").offsetTop,
+behavior:"smooth"
+})
+
+}
+
+function send(e){
+
+e.preventDefault()
+alert("تم ارسال الطلب (نسخة تجريبية)")
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
