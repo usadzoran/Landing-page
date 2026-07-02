@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NexaChat | المحادثة</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#eef2f7;
+display:flex;
+flex-direction:column;
+height:100vh;
+}
+
+header{
+
+height:70px;
+
+background:#2563eb;
+
+display:flex;
+
+align-items:center;
+
+padding:0 15px;
+
+color:white;
+
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+}
+
+.back{
+
+font-size:26px;
+
+cursor:pointer;
+
+margin-left:15px;
+
+}
+
+.avatar{
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+margin-left:12px;
+
+}
+
+.info{
+
+flex:1;
+
+}
+
+.name{
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+.status{
+
+font-size:13px;
+
+color:#dbeafe;
+
+}
+
+.actions{
+
+display:flex;
+
+gap:15px;
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+.messages{
+
+flex:1;
+
+padding:15px;
+
+overflow-y:auto;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.received{
+
+align-self:flex-start;
+
+background:white;
+
+padding:12px 15px;
+
+border-radius:15px 15px 15px 5px;
+
+margin-bottom:12px;
+
+max-width:75%;
+
+box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+}
+
+.sent{
+
+align-self:flex-end;
+
+background:#2563eb;
+
+color:white;
+
+padding:12px 15px;
+
+border-radius:15px 15px 5px 15px;
+
+margin-bottom:12px;
+
+max-width:75%;
+
+}
+
+.footer{
+
+height:75px;
+
+background:white;
+
+display:flex;
+
+align-items:center;
+
+padding:10px;
+
+gap:10px;
+
+box-shadow:0 -2px 8px rgba(0,0,0,.1);
+
+}
+
+.footer button{
+
+width:48px;
+
+height:48px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:22px;
+
+background:#f3f4f6;
+
+}
+
+.footer input{
+
+flex:1;
+
+padding:14px;
+
+border:none;
+
+outline:none;
+
+border-radius:30px;
+
+background:#f3f4f6;
+
+font-size:16px;
+
+}
+
+.send{
+
+background:#2563eb !important;
+
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="back" onclick="window.location='home.html'">
+
+⬅
+
+</div>
+
+<img class="avatar" src="https://i.pravatar.cc/150?img=11">
+
+<div class="info">
+
+<div class="name">
+
+محمد
+
+</div>
+
+<div class="status">
+
+🟢 متصل الآن
+
+</div>
+
+</div>
+
+<div class="actions">
+
+📞
+
+🎥
+
+⋮
+
+</div>
+
+</header>
+
+<div class="messages" id="messages">
+
+<div class="received">
+
+السلام عليكم 👋
+
+</div>
+
+<div class="sent">
+
+وعليكم السلام
+
+</div>
+
+<div class="received">
+
+كيف حالك؟
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<button>
+
+📷
+
+</button>
+
+<input
+id="message"
+type="text"
+placeholder="اكتب رسالة...">
+
+<button
+class="send"
+onclick="sendMessage()">
+
+➤
+
+</button>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+const input=document.getElementById("message");
+
+const text=input.value.trim();
+
+if(text==="") return;
+
+const div=document.createElement("div");
+
+div.className="sent";
+
+div.innerText=text;
+
+document.getElementById("messages").appendChild(div);
+
+input.value="";
+
+document.getElementById("messages").scrollTop=document.getElementById("messages").scrollHeight;
+
+}
+
+</script>
+
+</body>
+
+  </html>
