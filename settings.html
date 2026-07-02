@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NexaChat | الإعدادات</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+height:70px;
+background:#2563eb;
+display:flex;
+align-items:center;
+padding:0 20px;
+color:#fff;
+font-size:22px;
+font-weight:bold;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.back{
+font-size:26px;
+margin-left:15px;
+cursor:pointer;
+}
+
+.container{
+padding:20px;
+}
+
+.section{
+background:#fff;
+border-radius:18px;
+padding:18px;
+margin-bottom:18px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.title{
+font-size:18px;
+font-weight:bold;
+margin-bottom:15px;
+color:#111827;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+border-bottom:1px solid #eee;
+}
+
+.item:last-child{
+border:none;
+}
+
+.name{
+font-size:16px;
+color:#111827;
+}
+
+.switch{
+position:relative;
+width:55px;
+height:30px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#cbd5e1;
+border-radius:30px;
+transition:.3s;
+cursor:pointer;
+}
+
+.slider:before{
+content:"";
+position:absolute;
+height:24px;
+width:24px;
+left:3px;
+top:3px;
+background:white;
+border-radius:50%;
+transition:.3s;
+}
+
+input:checked + .slider{
+background:#22c55e;
+}
+
+input:checked + .slider:before{
+transform:translateX(25px);
+}
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}
+
+.save{
+background:#2563eb;
+color:#fff;
+}
+
+.logout{
+background:#dc2626;
+color:#fff;
+}
+
+.version{
+text-align:center;
+margin-top:30px;
+color:#6b7280;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="back" onclick="window.location='home.html'">
+⬅
+</div>
+
+الإعدادات
+
+</header>
+
+<div class="container">
+
+<div class="section">
+
+<div class="title">
+عام
+</div>
+
+<div class="item">
+
+<div class="name">
+الوضع الليلي
+</div>
+
+<label class="switch">
+
+<input type="checkbox">
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="item">
+
+<div class="name">
+الإشعارات
+</div>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="item">
+
+<div class="name">
+إظهار آخر ظهور
+</div>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="title">
+الحساب
+</div>
+
+<div class="item">
+
+<div class="name">
+تغيير كلمة المرور
+</div>
+
+<span>›</span>
+
+</div>
+
+<div class="item">
+
+<div class="name">
+اللغة
+</div>
+
+<span>العربية</span>
+
+</div>
+
+<div class="item">
+
+<div class="name">
+حول التطبيق
+</div>
+
+<span>ℹ️</span>
+
+</div>
+
+</div>
+
+<button class="save">
+حفظ الإعدادات
+</button>
+
+<button class="logout" onclick="window.location='login.html'">
+تسجيل الخروج
+</button>
+
+<div class="version">
+NexaChat v1.0
+</div>
+
+</div>
+
+</body>
+
+  </html>
