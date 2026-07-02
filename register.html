@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>إنشاء حساب | NexaChat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+width:92%;
+max-width:400px;
+padding:35px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.logo{
+font-size:55px;
+text-align:center;
+margin-bottom:10px;
+}
+
+h2{
+text-align:center;
+color:#fff;
+margin-bottom:25px;
+}
+
+.group{
+margin-bottom:18px;
+}
+
+.group label{
+display:block;
+color:#ddd;
+margin-bottom:8px;
+}
+
+.group input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+outline:none;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#16a34a;
+color:#fff;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+margin-top:10px;
+}
+
+button:hover{
+background:#15803d;
+}
+
+.links{
+text-align:center;
+margin-top:20px;
+}
+
+.links a{
+color:#60a5fa;
+text-decoration:none;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+.message{
+display:none;
+margin-top:15px;
+padding:12px;
+border-radius:10px;
+text-align:center;
+font-size:15px;
+}
+
+.success{
+background:#16a34a;
+color:#fff;
+}
+
+.error{
+background:#dc2626;
+color:#fff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">👤</div>
+
+<h2>إنشاء حساب</h2>
+
+<form id="registerForm">
+
+<div class="group">
+<label>الاسم الكامل</label>
+<input
+type="text"
+id="name"
+placeholder="أدخل اسمك"
+required>
+</div>
+
+<div class="group">
+<label>البريد الإلكتروني</label>
+<input
+type="email"
+id="email"
+placeholder="example@email.com"
+required>
+</div>
+
+<div class="group">
+<label>كلمة المرور</label>
+<input
+type="password"
+id="password"
+placeholder="********"
+required>
+</div>
+
+<div class="group">
+<label>تأكيد كلمة المرور</label>
+<input
+type="password"
+id="confirmPassword"
+placeholder="********"
+required>
+</div>
+
+<button type="submit">
+إنشاء الحساب
+</button>
+
+<div id="successBox" class="message success">
+تم إنشاء الحساب بنجاح.
+</div>
+
+<div id="errorBox" class="message error">
+كلمتا المرور غير متطابقتين.
+</div>
+
+<div class="links">
+
+<a href="login.html">
+لديك حساب؟ تسجيل الدخول
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+const form=document.getElementById("registerForm");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const password=document.getElementById("password").value;
+
+const confirm=document.getElementById("confirmPassword").value;
+
+const success=document.getElementById("successBox");
+
+const error=document.getElementById("errorBox");
+
+success.style.display="none";
+error.style.display="none";
+
+if(password!==confirm){
+
+error.style.display="block";
+return;
+
+}
+
+/*
+
+سيتم هنا ربط Supabase
+
+إنشاء الحساب الحقيقي
+
+*/
+
+success.style.display="block";
+
+setTimeout(function(){
+
+window.location.href="login.html";
+
+},1500);
+
+});
+
+</script>
+
+</body>
+
+  </html>
